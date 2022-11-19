@@ -12,22 +12,36 @@ public class CountEvenWords implements Observable {
     private List<Observer> observers;
 
     private String text;
-    private int count = 0;
+    private int count;
 
     public CountEvenWords() {
         observers = new ArrayList<>();
+        count = 0;
     }
 
     public void count(String text) {
         String[] words = text.split(" ");
+
         for (String word : words) {
-            if (word.length() % 2 == 0) {
+            if (word.length() % 2 == 0 && word.length() > 0) {
                 count++;
             }
         }
         System.out.println("Total de palavras pares: " + count);
         this.text = text;
         notifyObservers();
+    }
+
+    public List<Observer> getObservers() {
+        return observers;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getCount() {
+        return count;
     }
 
     public void addObserver(Observer observer) {

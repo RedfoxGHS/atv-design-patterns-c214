@@ -12,10 +12,11 @@ public class CountAllWords implements Observable {
     private List<Observer> observers;
 
     private String text;
-    private int count = 0;
+    private int count;
 
     public CountAllWords() {
         observers = new ArrayList<>();
+        count = 0;
     }
 
     public void count(String text) {
@@ -24,6 +25,18 @@ public class CountAllWords implements Observable {
         System.out.println("Total de palavras: " + count);
         this.text = text;
         notifyObservers();
+    }
+
+    public List<Observer> getObservers() {
+        return observers;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getCount() {
+        return count;
     }
 
     public void addObserver(Observer observer) {

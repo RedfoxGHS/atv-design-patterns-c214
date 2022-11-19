@@ -11,10 +11,11 @@ public class CountWordsThatStartWithCapitalLetter implements Observable {
 
     private List<Observer> observers;
     private String text;
-    private int count = 0;
+    private int count;
 
     public CountWordsThatStartWithCapitalLetter() {
         observers = new ArrayList<>();
+        count = 0;
     }
 
     public void count(String text) {
@@ -27,6 +28,18 @@ public class CountWordsThatStartWithCapitalLetter implements Observable {
         this.text = text;
         System.out.println("Palavras que começam com letra maiúscula: " + count);
         notifyObservers();
+    }
+
+    public List<Observer> getObservers() {
+        return observers;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getCount() {
+        return count;
     }
 
     public void addObserver(Observer observer) {
