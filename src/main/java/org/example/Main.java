@@ -1,6 +1,7 @@
 package org.example;
 
-import org.example.q2.observers.ObserverMenager;
+import org.example.q1.strategy.StrategyController;
+import org.example.q2.observers.ObserverManager;
 
 import java.util.Scanner;
 
@@ -8,10 +9,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Atividade de C214 - Design Patterns");
-
+        ObserverManager observerManager = new ObserverManager();
+        StrategyController strategyController = new StrategyController();
+        for (int i = 0; i < 100; i++) {
+            System.out.println();
+        }
+        System.out.println("##### Atividade de C214 - Design Patterns #####");
         int option = 0;
-        ObserverMenager observerMenager = new ObserverMenager();
         do{
             System.out.println("#####################################################################");
             System.out.println("Escolha uma das opções abaixo:");
@@ -24,10 +28,11 @@ public class Main {
             switch (option) {
                 case 1:
                     System.out.println("Strategy");
+                    strategyController.loopOptions();
                     break;
                 case 2:
                     System.out.println("Observer");
-                    observerMenager.loopOptions();
+                    observerManager.loopOptions();
                     break;
                 case 3:
                     System.out.println("Saindo...");

@@ -7,7 +7,12 @@ import org.example.q2.observers.impl.ObserverImpl;
 
 import java.util.Scanner;
 
-public class ObserverMenager {
+
+/**
+ * ObserverManager class
+ * Classe criada apenas para testar os observers
+ */
+public class ObserverManager {
 
     private CountAllWords countAllWords;
     private CountEvenWords countEvenWords;
@@ -17,7 +22,7 @@ public class ObserverMenager {
     private ObserverImpl observer2;
     private ObserverImpl observer3;
 
-    public ObserverMenager() {
+    public ObserverManager() {
         countAllWords = new CountAllWords();
         countEvenWords = new CountEvenWords();
         countWordsThatStartWithCapitalLetter = new CountWordsThatStartWithCapitalLetter();
