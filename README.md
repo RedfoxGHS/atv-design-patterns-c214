@@ -10,7 +10,7 @@ Os design patterns implementados foram:
 
 ## Como executar
 - Para executar o projeto é necessário ter o java 17 instalado na máquina.
-- Utilizando o Intellj IDEA, basta abrir o projeto e executar a classe `Main.java`.
+- Utilizando o Intellj IDEA(ou outra IDE), basta abrir o projeto e executar a classe `Main.java`.
 
 ## Como executar os testes
 - Para executar os testes com intellj, basta clicar com o botão direito do mouse na pasta `test` e selecionar a opção `Run 'All Tests'`.
