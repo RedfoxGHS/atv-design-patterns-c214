@@ -1,4 +1,4 @@
-package org.example.q2;
+package org.example.q2.observers.impl;
 
 import org.example.q2.observers.impl.CountEvenWords;
 import org.junit.jupiter.api.BeforeEach;

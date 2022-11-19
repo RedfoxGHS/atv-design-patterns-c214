@@ -1,4 +1,4 @@
-package org.example.q2;
+package org.example.q2.observers.impl;
 
 import org.example.q2.observers.Observer;
 import org.example.q2.observers.impl.CountAllWords;
