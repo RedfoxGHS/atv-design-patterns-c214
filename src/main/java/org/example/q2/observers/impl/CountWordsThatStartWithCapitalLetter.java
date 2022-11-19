@@ -20,9 +20,11 @@ public class CountWordsThatStartWithCapitalLetter implements Observable {
 
     public void count(String text) {
         String[] words = text.split(" ");
-        for (String word : words) {
-            if (Character.isUpperCase(word.charAt(0))) {
-                count++;
+        if (words.length > 0) {
+            for (String word : words) {
+                if (word.length() > 0 && Character.isUpperCase(word.charAt(0))) {
+                    count++;
+                }
             }
         }
         this.text = text;

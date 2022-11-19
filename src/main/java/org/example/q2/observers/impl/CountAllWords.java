@@ -20,8 +20,10 @@ public class CountAllWords implements Observable {
     }
 
     public void count(String text) {
-        String[] words = text.split(" ");
-        count = words.length;
+        if (text.length() > 0) {
+            String[] words = text.split(" ");
+            count = words.length;
+        }
         System.out.println("Total de palavras: " + count);
         this.text = text;
         notifyObservers();
